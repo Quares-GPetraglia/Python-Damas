@@ -24,7 +24,8 @@ class Window:
         self.window = Tk()
         self.window.title('Damas')
         self.window.resizable(0, 0)
-        self.window.iconbitmap(os.path.join("images", 'icon.ico'))
+        full_path = os.path.dirname(os.path.abspath(__file__))
+        self.window.iconbitmap(os.path.join(full_path, "../images", 'icon.ico'))
 
     def open_window(self):
         self.window.mainloop()

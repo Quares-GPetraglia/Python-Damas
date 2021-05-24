@@ -17,18 +17,19 @@ class PieceImage:
     img_player_o_turn = None
 
     def __init__(self):
-        self.img_white = PhotoImage(file=os.path.join("images", 'white.png'))
-        self.img_black = PhotoImage(file=os.path.join("images", 'black.png'))
-        self.img_player_x = PhotoImage(file=os.path.join("images", 'red.png'))
-        self.img_player_o = PhotoImage(file=os.path.join("images", 'blue.png'))
-        self.img_player_x_selected = PhotoImage(file=os.path.join("images", 'red-selected.png'))
-        self.img_player_o_selected = PhotoImage(file=os.path.join("images", 'blue-selected.png'))
-        self.img_player_x_q = PhotoImage(file=os.path.join("images", 'red-queen.png'))
-        self.img_player_o_q = PhotoImage(file=os.path.join("images", 'blue-queen.png'))
-        self.img_player_x_q_selected = PhotoImage(file=os.path.join("images", 'red-queen-selected.png'))
-        self.img_player_o_q_selected = PhotoImage(file=os.path.join("images", 'blue-queen-selected.png'))
-        self.img_player_x_turn = PhotoImage(file=os.path.join("images", 'red-turn.png'))
-        self.img_player_o_turn = PhotoImage(file=os.path.join("images", 'blue-turn.png'))
+        full_path = os.path.dirname(os.path.abspath(__file__))
+        self.img_white = PhotoImage(file=os.path.join(full_path, "../images", 'white.png'))
+        self.img_black = PhotoImage(file=os.path.join(full_path, "../images", 'black.png'))
+        self.img_player_x = PhotoImage(file=os.path.join(full_path, "../images", 'red.png'))
+        self.img_player_o = PhotoImage(file=os.path.join(full_path, "../images", 'blue.png'))
+        self.img_player_x_selected = PhotoImage(file=os.path.join(full_path, "../images", 'red-selected.png'))
+        self.img_player_o_selected = PhotoImage(file=os.path.join(full_path, "../images", 'blue-selected.png'))
+        self.img_player_x_q = PhotoImage(file=os.path.join(full_path, "../images", 'red-queen.png'))
+        self.img_player_o_q = PhotoImage(file=os.path.join(full_path, "../images", 'blue-queen.png'))
+        self.img_player_x_q_selected = PhotoImage(file=os.path.join(full_path, "../images", 'red-queen-selected.png'))
+        self.img_player_o_q_selected = PhotoImage(file=os.path.join(full_path, "../images", 'blue-queen-selected.png'))
+        self.img_player_x_turn = PhotoImage(file=os.path.join(full_path, "../images", 'red-turn.png'))
+        self.img_player_o_turn = PhotoImage(file=os.path.join(full_path, "../images", 'blue-turn.png'))
 
     def get_image(self, piece):
         if piece == 'w':
